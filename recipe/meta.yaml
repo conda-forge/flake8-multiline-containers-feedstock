@@ -1,5 +1,5 @@
 {% set name = "flake8-multiline-containers" %}
-{% set version = "0.0.18" %}
+{% set version = "0.0.19" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/flake8-multiline-containers-{{ version }}.tar.gz
-  sha256: ee1f8411398d303a6d8ea1b2ab99e4e89b03bd366f1d093af4920b33ca1c4aeb
+  sha256: 7c47527f1a2b0a991b876e58a2758e0ecc6b2d10a5fd4ee7740d042722f2f281
 
 build:
   number: 0
@@ -29,7 +29,7 @@ test:
     - flake8_multiline_containers
   commands:
     - pip check
-    - 'flake8 --version | grep flake8_multiline_containers'
+    - flake8 --version | grep flake8_multiline_containers
   requires:
     - flake8
     - m2-grep  # [win]
